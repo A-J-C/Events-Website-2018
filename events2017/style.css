@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+/* remove border radius on navbar*/
+.navbar {
+    border-radius: 0;
+    font-family: Impact, 'Anton';
+    font-size: 20px;
+}
+
+/* background for website and setting size so flex elements in body are sized properly */
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* reduce padding between rows */
+.space {
+    padding: 0 2px;
+    margin-bottom: 10px;
+}
+
+/* keeps the main search row alligned into the middle to counteract the shortened padding */
+.space:first-child {
+    padding-left: 64px;
+}
+
+/* give the search button extra space */
+.search {
+    padding: 0 10px;
+}
+
+/* stop search row being too wide */
+.maxwidth {
+    max-width: 1400px;
+    margin-bottom: 50px;
+}
+
+/* style an event item */
+.event, .venue {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    margin: 10px;
+}
+
+/* correctly align events in left column */
+.event:nth-child(odd) {
+    margin-left: 65px;
+    margin-right: 22.5px;
+}
+
+/* initially no extra info should be displayed */
+.extraInfo {
+    display: none;
+}
+
+/* stle the evenet title */
+.title {
+    border-bottom: 1px solid grey;
+    margin-top: -15px;
+    font-family: Impact, 'Anton';
+    font-size: 25px;
+}
+
+/* larger font */
+.eventDate, .venueName {
+    font-size: 17px;
+}
+
+/* give space around blurb */
+.blurb {
+    margin: 5px 0;
+}
+
+/* restyle event links */
+.event a, .venue a {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* making event look clickable */
+.event:hover, .venue:hover {
+    background: rgba(220, 220, 220, 0.75);
+    cursor: pointer;
+}
+
+/* extra spacing */
+.eventDate {
+    padding-top: 10px;
+}
+
+/* bold venue name */
+.venueName {
+    font-weight: bold;
+}
+
+/* don't let image or map be wider than parent event div */
+.icon img, .map {
+    max-width: 100%;
+    min-width: 25%;
+}
+
+/* styling for no events found message */
+#showAll, #show, #error {
+    font-weight: bold;
+    text-align: center;
+    margin-left: 80px;
+}
+
+/* make it look clickable */
+#showAll:hover, #error:hover {
+    background: rgba(20, 20, 20, 0.6);
+    color: white;
+}
+
+/* on a small screen fix padding */
+@media (max-width: 768px) {
+    .space {
+        padding: 0 10px;
+    }
+    .space:first-child {
+        padding-left: 10px;
+    }
+    .event, #showAll, #show, #error {
+        margin: 2.5px 10px;
+    }
+    .event:nth-child(odd) {
+        margin: 2.5px 10px 5px 10px;
+    }
+}
+
+/* venue header and external events header */
+#venHead, #venAdd, #eventExternalSpace #title {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Impact, 'Anton';
+    color: white;
+    background-color: rgba(50, 50, 50, 0.75);
+    margin-bottom: 15px;
+}
+#eventExternalSpace #title {
+    margin-top: 20px;
+}
+
+/* external events removing hover */
+.ext:hover {
+  cursor: default;
+  background: rgba(255, 255, 255, 0.75);
+}

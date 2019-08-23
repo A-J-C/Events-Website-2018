@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Bootstrap CDN and Datepicler, jQuery, link to Stylesheet and Script -->
+    <title> NE. Music Gigs </title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-ixon" href="favicon.ico">
+    <meta name="viewport" content="initial-scale=1" http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+</head>
+
+<body>
+    <!-- Navbar (adapted from Bootstrap examples https://v4-alpha.getbootstrap.com/examples/navbar-top-fixed/) -->
+    <nav class="fixed-top navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">NE-MusicGigs.com</a>
+            </div>
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav nav">
+                    <li class="active"><a href="#">Events Search</a></li>
+                    <li><a href="/events2017/admin">Admin Area</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+
+    <div class="container-fluid maxwidth">
+        <!-- Grid layout -->
+        <div class="form-group row">
+            <div class="col-sm-8 space">
+                <input id="nameInput" class="form-control" placeholder="Search North East Music Gigs">
+            </div>
+            <!-- Date picker (adapted from documentation https://bootstrap-datepicker.readthedocs.io/en/latest/) -->
+            <div class="col-sm-2 space">
+                <div class="input-group date" data-provide="datepicker-inline">
+                    <input id="dateInput" type="text" class="form-control">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 space search">
+                <button type="submit" id="search" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> Search</button>
+            </div>
+        </div>
+        <!-- Contains all the returned events -->
+        <div class="eventSpace" id="eventSpace"></div>
+        <div class="eventSpace" id="eventExternalSpace"></div>
+    </div>
+</body>
+
+</html>

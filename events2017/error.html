@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Bootstrap CDN and Datepicler, jQuery, link to Stylesheet and Script -->
+    <title> NE. Music Gigs </title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-ixon" href="favicon.ico">
+    <meta name="viewport" content="initial-scale=1" http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Anton');
+    /* remove border radius on navbar*/
+    .navbar {
+        border-radius: 0;
+        font-family: Impact, 'Anton';
+        font-size: 20px;
+    }
+
+    /* background for website and setting size so flex elements in body are sized properly */
+    body {
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    /* stop search row being too wide */
+    .maxwidth {
+        max-width: 1400px;
+        margin-bottom: 50px;
+    }
+
+    /* style an event item */
+    .event, .venue {
+        background: rgba(255, 255, 255, 0.75);
+        padding: 20px;
+        margin: 10px;
+    }
+
+    /* making event look clickable */
+    .event:hover, .venue:hover {
+        background: rgba(220, 220, 220, 0.75);
+        cursor: pointer;
+    }
+
+    /* styling for no events found message */
+    #showAll, #error {
+        font-weight: bold;
+        text-align: center;
+        margin-left: 80px;
+    }
+
+    /* make it look clickable */
+    #showAll:hover, #error:hover {
+        background: rgba(20, 20, 20, 0.6);
+        color: white;
+    }
+
+    /* on a small screen fix padding */
+    @media (max-width: 768px) {
+        .space {
+            padding: 0 10px;
+        }
+        .space:first-child {
+            padding-left: 10px;
+        }
+        .event, #showAll, #error {
+            margin: 2.5px 10px;
+        }
+        .event:nth-child(odd) {
+            margin: 2.5px 10px 5px 10px;
+        }
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+        /* to redirect from error page */
+        $("#error").click(function() {
+            window.location.href = "/events2017";
+        });
+    });
+</script>
+
+<body>
+    <!-- Navbar (adapted from Bootstrap examples https://v4-alpha.getbootstrap.com/examples/navbar-top-fixed/) -->
+    <nav class="fixed-top navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">NE-MusicGigs.com</a>
+            </div>
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav nav">
+                    <li class="active"><a href="#">Events Search</a></li>
+                    <li><a href="/events2017/admin.html">Admin Area</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container-fluid maxwidth">
+        <!-- Grid layout - Error message -->
+        <div class="row">
+            <div class="col-sm-10 event" id="error">
+                ERROR: No page found at this URL. Please Click Here to return to the home page.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

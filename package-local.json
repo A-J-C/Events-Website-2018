@@ -1,0 +1,23 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "Mxcm21 node.js web app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mxcm21",
+  "license": "ISC",
+  "dependencies": {
+    "all": "0.0.0",
+    "body-parser": "^1.18.2",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "moment": "^2.19.3",
+    "request": "^2.83.0",
+    "sqlite3": "^3.1.13"
+  },
+  "repository": {}
+}

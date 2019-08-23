@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+/* edit how venues are displayed */
+.venue {
+    margin: 10px 0;
+}
+.venue .venueURL {
+    padding-top: 5px;
+}
+
+/* Add button */
+#venAdd {
+    width: 50%;
+    margin: auto;
+    margin-top: 25px;
+    transition: background 0.5s ease-in-out;
+}
+#venAdd:hover {
+    background: rgba(255, 255, 255, 0.75);
+    color: black;
+    cursor: pointer;
+}
+
+/* Modal styling */
+.modal-title {
+    font-family: Impact, 'Anton';
+}
+
+/* note at bottom of add venue */
+#eFooter, #vFooter {
+    float: left;
+    font-style: italic;
+}
+
+/* colour in required fields */
+input.req {
+    border-color: red;
+    color: black;
+}
+.req {
+    color: red;
+}
+
+/* style events drop down */
+.extraInfo {
+    margin-top: 10px;
+}
+
+/* padding between events */
+.vEvent {
+    padding: 5px;
+    border-top: 1px solid grey;
+}
+
+/* style event title */
+.evTitle {
+    font-weight: bold;
+}
+
+/* style add event button */
+#eventAdd {
+    padding: 5px;
+    font-weight: bold;
+    background: white;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+}
+#eventAdd:hover {
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+}
+
+/* make date picker correct width */
+#datepicker {
+    padding: 0 15px;
+}
+
+/* make datepicker show properly */
+.modal.fade.in {
+    height: 95% !important;
+}
+
+/* delete button on right of div */
+.del {
+    float: right;
+    font-size: 20px;
+    margin-top: 5px;
+    color: grey;
+}
+.del:hover {
+    color: #F65A5B;
+}
+.vEvent .del {
+    font-size: 15px;
+    margin-top: 10px;
+}
+.inTitle, .title, .left {
+    float: left;
+}
+.title {
+    width: 100%;
+}
+
+/* sorts out float */
+.clear {
+    clear: both;
+}
+
+/* modal styling */
+.delete.modal {
+    border-radius: 0;
+}
+.delete .modal-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-seriff;
+    font-size: 25px;
+    text-align: center;
+}
+.delete .btn {
+    width: 48%;
+    border-radius: 0;
+}
+
+/* login form */
+#logFooter {
+    display: none;
+    float: left;
+    color: red;
+}
+#logFooter.visible {
+    display: block;
+}
+#login {
+    margin: auto;
+    float: none;
+    background: rgba(255, 255, 255, 0.85);
+}
+#loginHeader {
+    font-size: 35px;
+    font-family: Impact, 'Anton';
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+#loginBody {
+    padding: 20px 0;
+}
+#userWarn, #passWarn {
+    display: none;
+    color: red;
+    padding-bottom: 2px;
+}
+#loginFooter {
+    border-top: 1px solid grey;
+    padding: 10px;
+}
+#subLogin {
+    float: right;
+    font-family: Impact, 'Anton';
+    font-size: 20px;
+    border-radius: 0;
+    background-color: #bdbdbd;
+}
+#subLogin:hover {
+    color: white;
+    background-color: #3f3f3f;
+}
+#subLogin:focus {
+    outline: none;
+}
+#logFooter.visible {
+    padding-left: 20px;
+    padding-top: 7px;
+}
+.right {
+    float: right;
+}

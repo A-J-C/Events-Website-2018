@@ -1,0 +1,5 @@
+---
+applications:
+ - name: mxcm21Events
+   random-route: true
+   memory: 2GB
